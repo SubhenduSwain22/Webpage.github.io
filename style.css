@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=Poppins:ital,wght@0,300;1,800&family=Rubik+Mono+One&family=Ubuntu:wght@700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Ubuntu', sans-serif; 
+}
+nav{
+	position: fixed;
+	width: 100%;
+	padding: 20px 0;
+	z-index: 999;
+	transition: all 0.3s ease;
+}
+nav.sticky{
+	background:black;
+	padding: 13px 0;
+}
+nav .navbar{
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+}
+nav .navbar .logo a{
+	font-weight: 500;
+	font-size: 30px;
+	color: blue;
+}
+nav.sticky .navbar .logo a{
+	color: blue;
+}
+nav .navbar .menu{
+	display: flex;
+	position: relative;
+}
+nav .navbar .menu li{
+	list-style: none;
+	margin: 0 8px;
+}
+nav .navbar .menu a{
+	font-size: 18px;
+	font-weight: 500;
+	color: brown;
+	padding: 8px 0;
+	transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+	color: red;
+}
+nav .sticky .menu a{
+	color: blue;
+}
+nav .sticky .menu a:hover{
+	color: yellow;
+}
+.home{
+	height: 100vh;
+	width: 100%;
+	background: url("images/background.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.home .home-content{
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.home .text1{
+	font-size: 35px;
+	color: yellow;
+}
+.home .text2{
+	color:  yellow;
+	font-size: 60px;
+	font-weight: 600;
+	margin: -4px;
+}
+.home .text3{
+	color: yellow;
+	font-size: 45px;
+	margin: 0;
+}
+.about{
+	background: orange;
+}
+section{
+	padding-top: 40px;
+}
+section .content{
+	width: 80%;
+	margin: 40px auto;
+    font-family: 'Poppins',sans-serif;
+}
+section .title{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+section .title span{
+	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	position: relative;
+	padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+	content: '';
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	background: green;
+	left: 0;
+	bottom: 0;
+}
+section .title span::after{
+	bottom: -7px;
+	width: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.about .about-details{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.about .about-details .left{
+	width: 45%;
+}
+.about .left img{
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	border-radius: 15px;
+}
+.about .about-details right{
+	width: 55;
+}
+section .topic{
+	color: red;
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.about-details .right p{
+	text-align: justify;
+	color: blue;
+}
+section .button{
+	margin: 16px 0;
+
+}
+section .button button{
+	outline: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 25px;
+	font-weight: 400;
+	background:skyblue;
+	color: yellow;
+	border-radius: 2px solid transparent;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+section .button button:hover{
+	border-color: blue;
+	background-color: red;
+	color: black;
+}
+.skills{
+	background: orange;
+}
+.skills .content{
+	padding: 40px 0;
+}
+.skills .skills-details{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.skills-details .text{
+	width: 65%;
+}
+.skills-details p{
+	color: black;
+	text-align: justify;
+}
+.skills .skills-details .experience{
+	display: flex;
+	align-items: center;
+	margin: 0 10px;
+}
+.skills .skills-details .experience .lang{
+	color: darkgreen;
+	font-size: 80px;
+}
+.skills-details .boxes{
+	width: 35%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.skills-details .box{
+	width: calc(100% /2 - 20px);
+	margin: 20px 0;
+}
+.skills-details .boxes .topic{
+	font-size: 18px;
+	color: black;
+}
+.projects{
+	background: orange;
+}
+.projects .boxes{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.projects .boxes .box{
+	margin: 20px 0;
+	width: 100%;
+	align-items: center;
+	border-radius: 10px;
+	padding: 30px 10px;
+	box-shadow: 0 5px 10px darkred;
+	cursor: default;
+	transition: all 0.4s ease;
+}
+.projects .boxes .box:hover{
+	background: yellow;
+	color: black;
+}
+.contact{
+	background: orange;
+}
+.contact .contact-details{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contact .left .info{
+ 	color: black;
+	font-size: 25px;
+	width: 35%;	
+}
+footer{
+    background: black;
+    padding: 15px 23px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+}
+footer .text span{
+   font-size: 17px;
+   font-weight: 400;
+   color: white;
+}
+footer .text span a{
+   font-weight: 500;
+   color: white;
+}
+footer .text span a:hover{
+	text-decoration: underline;
+}
